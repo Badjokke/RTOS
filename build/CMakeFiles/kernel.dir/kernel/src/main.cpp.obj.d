@@ -1,0 +1,21 @@
+CMakeFiles/kernel.dir/kernel/src/main.cpp.obj: \
+ /home/trefil/sem/sources/kernel/src/main.cpp \
+ /home/trefil/sem/sources/kernel/include/drivers/gpio.h \
+ /home/trefil/sem/sources/kernel/include/board/rpi0/hal/intdef.h \
+ /home/trefil/sem/sources/kernel/include/board/rpi0/hal/peripherals.h \
+ /home/trefil/sem/sources/kernel/include/fs/filesystem.h \
+ /home/trefil/sem/sources/kernel/include/process/swi.h \
+ /home/trefil/sem/sources/kernel/include/process/spinlock.h \
+ /home/trefil/sem/sources/kernel/include/drivers/uart.h \
+ /home/trefil/sem/sources/kernel/include/drivers/bcm_aux.h \
+ /home/trefil/sem/sources/kernel/include/drivers/bridges/uart_defs.h \
+ /home/trefil/sem/sources/kernel/include/drivers/timer.h \
+ /home/trefil/sem/sources/kernel/include/drivers/oled_ssd1306.h \
+ /home/trefil/sem/sources/kernel/include/drivers/i2c.h \
+ /home/trefil/sem/sources/kernel/include/interrupt_controller.h \
+ /home/trefil/sem/sources/kernel/include/memory/memmap.h \
+ /home/trefil/sem/sources/kernel/include/memory/kernel_heap.h \
+ /home/trefil/sem/sources/kernel/include/process/process_manager.h \
+ /home/trefil/sem/sources/kernel/include/process/process.h \
+ /home/trefil/sem/sources/stdlib/include/stdstring.h \
+ /home/trefil/sem/sources/stdlib/include/stdfile.h

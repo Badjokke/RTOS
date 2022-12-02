@@ -1,0 +1,1 @@
+-I//wsl$$/Ubuntu/home/trefil/sem/sources/kernel/include -I//wsl$$/Ubuntu/home/trefil/sem/sources/stdlib/include -I//wsl$$/Ubuntu/home/trefil/sem/sources/stdutils/include -I//wsl$$/Ubuntu/home/trefil/sem/sources/kernel/include/board/rpi0

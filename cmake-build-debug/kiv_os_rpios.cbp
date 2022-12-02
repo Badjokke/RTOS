@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="kiv_os_rpios"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kivrtos_stdlib">
+				<Option output="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/libkivrtos_stdlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DRPI0"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdutils/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/board/rpi0"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 kivrtos_stdlib"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kivrtos_stdlib/fast">
+				<Option output="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/libkivrtos_stdlib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DRPI0"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdutils/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/board/rpi0"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 kivrtos_stdlib/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kernel">
+				<Option output="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/kernel.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DRPI0"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdutils/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/board/rpi0"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 kernel"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kernel/fast">
+				<Option output="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/kernel.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DRPI0"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/stdutils/include"/>
+					<Add directory="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/board/rpi0"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 kernel/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/board/rpi0/hal/intdef.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/board/rpi0/hal/peripherals.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/buffers/uart_buffer.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/bcm_aux.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/bridges/display_protocol.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/bridges/uart_defs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/gpio.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/i2c.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/oled_ssd1306.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/segmentdisplay.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/shiftregister.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/timer.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/trng.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/drivers/uart.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/condvar_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/gpio_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/mutex_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/oled_ssd1306_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/pipe_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/segmentdisplay_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/semaphore_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/shiftregister_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/trng_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/drivers/uart_fs.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/fs/filesystem.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/interrupt_controller.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/memory/kernel_heap.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/memory/memmap.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/memory/mmu.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/memory/pages.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/memory/pt_alloc.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/condvar.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/mutex.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/pipe.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/process.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/process_manager.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/resource_manager.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/semaphore.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/spinlock.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/include/process/swi.h">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/buffers/uart_buffer.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/cxx.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/bcm_aux.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/gpio.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/i2c.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/oled_ssd1306.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/segmentdisplay.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/shiftregister.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/timer.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/trng.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/drivers/uart.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/fs/filesystem.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/fs/filesystem_drivers.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/initsys.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/interrupt_controller.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/interrupts.s">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/main.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/memory/kernel_heap.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/memory/mmu.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/memory/mmu.s">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/memory/pages.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/memory/pt_alloc.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/condvar.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/mutex.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/pipe.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/process_manager.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/resource_manager.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/scheduler.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/semaphore.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/spinlock.s">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/process/switch.s">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/start.s">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/startup.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/kernel/src/test_processes.cpp">
+			<Option target="kernel"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include/memory.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include/memory_manager.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include/stdbuffer.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include/stdfile.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include/stdmutex.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/include/stdstring.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/src/memory_manager.cpp">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/src/stdbuffer.cpp">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/src/stdfile.cpp">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/src/stdmutex.cpp">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdlib/src/stdstring.cpp">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdutils/include/oled.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdutils/src/oled.cpp">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/stdutils/src/oled_font.h">
+			<Option target="kivrtos_stdlib"/>
+		</Unit>
+		<Unit filename="//wsl$/Ubuntu/home/trefil/sem/sources/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

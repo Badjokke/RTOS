@@ -1,0 +1,2 @@
+C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\ar.exe qc libkivrtos_stdlib.a CMakeFiles/kivrtos_stdlib.dir/stdlib/src/memory_manager.cpp.obj CMakeFiles/kivrtos_stdlib.dir/stdlib/src/stdbuffer.cpp.obj CMakeFiles/kivrtos_stdlib.dir/stdlib/src/stdfile.cpp.obj CMakeFiles/kivrtos_stdlib.dir/stdlib/src/stdmutex.cpp.obj CMakeFiles/kivrtos_stdlib.dir/stdlib/src/stdstring.cpp.obj CMakeFiles/kivrtos_stdlib.dir/stdutils/src/oled.cpp.obj
+C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\ranlib.exe libkivrtos_stdlib.a

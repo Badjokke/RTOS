@@ -1,0 +1,4 @@
+/home/trefil/sem/sources/build/CMakeFiles/kivrtos_stdlib.dir
+/home/trefil/sem/sources/build/CMakeFiles/kernel.dir
+/home/trefil/sem/sources/build/CMakeFiles/edit_cache.dir
+/home/trefil/sem/sources/build/CMakeFiles/rebuild_cache.dir

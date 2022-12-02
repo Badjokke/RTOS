@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/trefil/sem/sources/kernel/src/interrupts.s
+
+/home/trefil/sem/sources/kernel/src/memory/mmu.s
+
+/home/trefil/sem/sources/kernel/src/process/spinlock.s
+
+/home/trefil/sem/sources/kernel/src/process/switch.s
+
+/home/trefil/sem/sources/kernel/src/start.s
+

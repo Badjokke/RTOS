@@ -1,0 +1,4 @@
+//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/CMakeFiles/kivrtos_stdlib.dir
+//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/CMakeFiles/kernel.dir
+//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/CMakeFiles/edit_cache.dir
+//wsl$/Ubuntu/home/trefil/sem/sources/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,23 @@
+CMakeFiles/kernel.dir/kernel/src/process/process_manager.cpp.obj: \
+ /home/trefil/sem/sources/kernel/src/process/process_manager.cpp \
+ /home/trefil/sem/sources/kernel/include/process/process_manager.h \
+ /home/trefil/sem/sources/kernel/include/board/rpi0/hal/intdef.h \
+ /home/trefil/sem/sources/kernel/include/process/process.h \
+ /home/trefil/sem/sources/kernel/include/process/swi.h \
+ /home/trefil/sem/sources/kernel/include/fs/filesystem.h \
+ /home/trefil/sem/sources/kernel/include/process/spinlock.h \
+ /home/trefil/sem/sources/kernel/include/process/resource_manager.h \
+ /home/trefil/sem/sources/kernel/include/process/mutex.h \
+ /home/trefil/sem/sources/kernel/include/board/rpi0/hal/peripherals.h \
+ /home/trefil/sem/sources/kernel/include/process/semaphore.h \
+ /home/trefil/sem/sources/kernel/include/process/condvar.h \
+ /home/trefil/sem/sources/kernel/include/process/pipe.h \
+ /home/trefil/sem/sources/kernel/include/memory/kernel_heap.h \
+ /home/trefil/sem/sources/kernel/include/memory/pages.h \
+ /home/trefil/sem/sources/kernel/include/memory/memmap.h \
+ /home/trefil/sem/sources/kernel/include/memory/mmu.h \
+ /home/trefil/sem/sources/kernel/include/memory/pt_alloc.h \
+ /home/trefil/sem/sources/kernel/include/drivers/uart.h \
+ /home/trefil/sem/sources/kernel/include/drivers/bcm_aux.h \
+ /home/trefil/sem/sources/kernel/include/drivers/bridges/uart_defs.h \
+ /home/trefil/sem/sources/kernel/include/drivers/timer.h

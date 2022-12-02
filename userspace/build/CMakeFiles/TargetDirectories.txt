@@ -1,0 +1,9 @@
+/home/trefil/sem/sources/userspace/build/CMakeFiles/init_task.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/sos_task.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/oled_task.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/logger_task.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/counter_task.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/tilt_task.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/model_task.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/edit_cache.dir
+/home/trefil/sem/sources/userspace/build/CMakeFiles/rebuild_cache.dir
