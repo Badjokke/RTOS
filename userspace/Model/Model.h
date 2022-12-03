@@ -5,8 +5,8 @@
 #include <stdstring.h>
 #include <Sort.h>
 //nejaky numero indikujici prazdne misto ve floatu
-//asi by bylo lepsi tam dat nejake velke a divne
-//ale 42 je 42
+//asi by bylo lepsi tam dat nejake velke a unikatnejsi
+//pro tento pripad postaci neco zaporneho, protoze zaporne vstupy od uzivatele stejne neakceptuji
 #define EMPTY -42
 //pocet parametru modelu, tedy A...E
 #define PARAMETER_COUNT 5
@@ -90,11 +90,12 @@ private:
     bool Add_Data_Sample(float y);
     //vypise parametry A...E nejlepsiho z generace
     void Print_Parameters();
-
+    //vypise vsechny predikce nejlepsiho v populaci
+    void Print_Alpha_Predictions();
 public:
     //konstruktor prebira parametry od uzivatele, t_delta a t_pred
     //population count a epoch count jsou hard coded mnou, da se s nimi nejak hybat
-    Model(int t_delta, int t_pred, int population_count, int epoch_count, int window_size);
+    Model(int t_delta, int t_pred, int population_count, int epoch_count, int window_size,Buffer* bfr);
     //nastav modelu bufferu, aby mohl ve vypoctu implementovat checkpointing - dotazovani se, zda neco neni na vstupu
     //metoda nemusi nutne existovat, model si muze vytvorit buffer v konstruktoru
     void Set_Buffer(Buffer* bfr);

@@ -11,7 +11,6 @@ CMakeFiles/model_task.dir/model_task/main.cpp.obj: \
  /home/trefil/sem/sources/userspace/../kernel/include/process/process.h \
  /home/trefil/sem/sources/userspace/../stdlib/include/memory.h \
  /home/trefil/sem/sources/userspace/../stdlib/include/Heap_Manager.h \
- /home/trefil/sem/sources/userspace/../stdlib/include/stdmutex.h \
  /home/trefil/sem/sources/userspace/../kernel/include/drivers/bridges/uart_defs.h \
  /home/trefil/sem/sources/userspace/Model/Model.h \
  /home/trefil/sem/sources/userspace/../stdlib/include/Random.h \

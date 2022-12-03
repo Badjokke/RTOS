@@ -3,15 +3,12 @@
 //
 #include <stdstring.h>
 #include <stdbuffer.h>
-#include <stdmutex.h>
 #include <drivers/bridges/uart_defs.h>
-#include <hal/intdef.h>
 #include <memory.h>
 #include <Model.h>
-#include <Random.h>
 #include <stdbuffer.h>
 //konstantni parametry modelu
-const int POPULATION_COUNT = 500;
+const int POPULATION_COUNT = 1000;
 const int EPOCH_COUNT = 50;
 const int DATA_WINDOW_SIZE = 20;
 
@@ -62,9 +59,10 @@ int main(){
     Buffer* bfr;
     //"okenko" dat - sem strkame data od uzivatele a predavame je modelu
     //float* data;
-    //user input
-    char* t_pred;
-    char* t_delta;
+    /*uint32_t address = reinterpret_cast<uint32_t>(malloc(4));
+    char baff[20];
+    itoa(address,baff,16);*/
+    char* x = new char[4];//reinterpret_cast<char*>(address);
 
     //pomocne stringy pro strcat funkci, abych nejak rozumne odpovdel uzivateli, neni to uplne hezke
     char tmp1[] = "OK, predpoved ";
@@ -72,41 +70,42 @@ int main(){
     char tmp3[] = " minut\n";
 
     //buffer pro vyhazovani outputu uzivateli
-    char tmp_str[255] = {0};
+    char tmp_str[128] = {0};
 
-    //data = new float[window_size];
-    //dummy_data(data);
 
     bfr = new Buffer(uart_file);
 
+    bfr->Write_Line(x);
+
+    bfr->Write_Line("\n");
     //vypis uzivateli uvodni povidani
     hello_uart_world(bfr);
-    /*
     //zablokuj se dokud neprectes int
-    t_delta = bfr->Read_Uart_Line_Blocking(INT_INPUT);
-    //vypis t_pred hodnotu uzivateli v lidskem formatu
-    strncat(tmp_str,tmp1,255);
-    strncat(tmp_str,t_delta,255);
-    strncat(tmp_str,tmp3,255);
+    bfr->Write_Line(">");
+    char* t_delta = bfr->Read_Uart_Line_Blocking(INT_INPUT);
+    strncat(tmp_str,tmp1,128);
+    strncat(tmp_str,t_delta,128);
+    strncat(tmp_str,tmp3,128);
     bfr->Write_Line(tmp_str);
     tmp_str[0] = '\0';
 
     //zablokuj se dokud neprectes int
-    t_pred = bfr->Read_Uart_Line_Blocking(INT_INPUT);
-    //vypis t_pred hodnotu uzivateli v lidskem formatu
-    strncat(tmp_str, tmp2,255);
-    strncat(tmp_str,t_pred,255);
-    strncat(tmp_str, tmp3,255);
+    bfr->Write_Line(">");
+    char* t_pred = bfr->Read_Uart_Line_Blocking(INT_INPUT);
+
+    strncat(tmp_str, tmp2,128);
+    strncat(tmp_str,t_pred,128);
+    strncat(tmp_str, tmp3,128);
     bfr->Write_Line(tmp_str);
     tmp_str[0] = '\0';
-    */
+
 
     //vyparsuj hodnoty od uzivatele na inty
-    const int T_DELTA_NUM = 5;//atoi(t_delta);
-    const int T_PRED_NUM = 15;//atoi(t_pred);
+    const int T_PRED_NUM = atoi(t_delta);
+    const int T_DELTA_NUM = atoi(t_pred);
 
     //trida ktera v podstate obaluje hlavni vypocet a interakci s uzivatelem
-    m = new Model(T_DELTA_NUM,T_PRED_NUM,POPULATION_COUNT,EPOCH_COUNT,DATA_WINDOW_SIZE);
+    m = new Model(T_PRED_NUM,T_DELTA_NUM,POPULATION_COUNT,EPOCH_COUNT,DATA_WINDOW_SIZE,bfr);
 
     m->Set_Buffer(bfr);
     /**

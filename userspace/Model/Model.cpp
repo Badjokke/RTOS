@@ -1,11 +1,12 @@
 #include <Model.h>
 
-Model::Model(int t_delta, int t_pred,int population_count, int epoch_count, int window_size):
+Model::Model(int t_delta, int t_pred,int population_count, int epoch_count, int window_size,Buffer* bfr):
 t_delta(t_delta),
 t_pred(t_pred),
 population_count(population_count),
 epoch_count(epoch_count),
-window_size(window_size)
+window_size(window_size),
+bfr(bfr)
 {
     //alokuj pamet na halde po struktury, ktere potrebuji
     Init();
@@ -13,7 +14,7 @@ window_size(window_size)
 };
 
 float Model::Calc_B(float D, float E, float y){
-    return (D / E) * derivative_value + (1.0/E) * y;
+    return ((D / E) * derivative_value) + ((1.0/E) * y);
 }
 
 
@@ -27,7 +28,7 @@ float Model::Calculate_Prediction(float* parameters, float y){
     float E = parameters[4];
 
     float b_t = Calc_B(D,E,y);
-    float y_predicted = A * b_t + B * b_t * (b_t - y) + C;
+    float y_predicted = (A * b_t) + ((B * b_t) * (b_t - y)) + C;
     return y_predicted;
 }
 
@@ -80,9 +81,11 @@ float Model::Calculate_Fitness(Tribesman* tribesman){
 void Model::First_Generation(){
     for(int i = 0; i < population_count; i++){
         Tribesman* tribesman = this->population[i];
-        //pseudorandom parametry A...E
-        for(int j = 0; j < PARAMETER_COUNT; j++)
+        //randomizuj parametry
+        for(int j = 0; j < PARAMETER_COUNT; j++){
             tribesman->parameters[j] = this->random->Get_Float();
+
+        }
         //nic jeste neni predikovano
         for(int j = 0; j < window_size; j++)
             tribesman->predicted_values[j] = EMPTY;
@@ -109,10 +112,10 @@ void Model::Print_Parameters(){
     for(int i = 0; i < PARAMETER_COUNT; i++){
         float f = tmp->parameters[i];
         ftoa(f,temp_float_buffer);
-        strcat(temp_buffer,params[i]);
-        strcat(temp_buffer,temp_float_buffer);
+        strncat(temp_buffer,params[i],128);
+        strncat(temp_buffer,temp_float_buffer,128);
         if(i != PARAMETER_COUNT - 1)
-            strcat(temp_buffer,",");
+            strcat(temp_buffer,", ");
     }
     this->bfr->Write_Line(temp_buffer);
     this->bfr->Write_Line("\n");
@@ -121,6 +124,7 @@ void Model::Print_Parameters(){
 }
 // inicializuj populaci
 void Model::Init() {
+
     this->population = reinterpret_cast<Tribesman**>(malloc(sizeof(Tribesman*) * population_count));
 
     for(int i = 0; i < population_count;i++){
@@ -131,11 +135,13 @@ void Model::Init() {
         //bss sekce je vynulovana, takze by tam nemel byt nejaky svinec
         //ale pro pripad, ze tam svinec je, tak nechceme, aby umrel task na neco hloupeho
         for(int j = 0; j < window_size; j++)
-            this->population[i]->predicted_values[j]= 0;
+            this->population[i]->predicted_values[j] =  0;
 
     }
+
     this->data = new float[window_size];
     //*1000 abych to mohl rozumne prevadet na floaty
+
     this->random = new Random_Generator(min_parameter_value * 1000, max_parameter_value * 1000, 4, 1, 42);
 
     //init nejlepsiho z generace
@@ -143,6 +149,7 @@ void Model::Init() {
     this->alpha->predicted_values = new float[window_size];
     for(int j = 0; j < window_size; j++)
         this->alpha->predicted_values[j] = 0;
+
     First_Generation();
 
 }
@@ -152,7 +159,6 @@ bool Model::Is_Data_Window_Full(){
 
 bool Model::Add_Data_Sample(float y){
     if(Is_Data_Window_Full()){
-        this->bfr->Write_Line("Dalsi datovy vzorek se mi nevejde do okenka \n");
         return false;
     }
     this->data[data_pointer++] = y;
@@ -208,6 +214,7 @@ void Model::Gene_Pool_Party(Tribesman** population){
 void Model::Eval_String_Command(const char *str){
     if(!strncmp("parameters",str,strlen("parameters"))){
         Print_Parameters();
+        Prompt_User();
         return;
     }
     else if(!strncmp("stop",str,strlen("stop"))){
@@ -221,7 +228,17 @@ void Model::Eval_String_Command(const char *str){
 
 
 }
+void Model::Print_Alpha_Predictions(){
+    Tribesman* t = alpha;
+    char bfr2[20];
+    for(int i = 0; i < data_pointer; i++){
+        float f = t->predicted_values[i];
+        ftoa(f,bfr2);
+        this->bfr->Write_Line(bfr2);
+        this->bfr->Write_Line("\n");
 
+    }
+};
 
 void Model::Checkpoint(){
     char* line = this->bfr->Read_Uart_Line();
@@ -232,18 +249,24 @@ void Model::Checkpoint(){
     float f;
     int i;
     switch (type) {
+        //nejaky prikaz od uzivatele
         case STRING_INPUT:
             Eval_String_Command(line);
             break;
+        //data na vstupu
         case FLOAT_INPUT:
             f = atof(line);
             if(Add_Data_Sample(f))
                is_fitting = true;
-            break;
+            return;
         case INT_INPUT:
-            i = atoi(line);
-            if(Add_Data_Sample(i))
-              is_fitting = true;
+            i  = atoi(line);
+            if(Add_Data_Sample(static_cast<float>(i)))
+                is_fitting = true;
+            return;
+        default:
+            bfr->Write_Line("Ocekavam kladne cislo \n");
+            Prompt_User();
             break;
     }
 }
@@ -272,7 +295,7 @@ void Model::Run(){
         }
         bool not_enough_data = false;
         bfr->Write_Line("Pocitam...\n");
-    //let pres vsechny epochy
+        //let pres vsechny epochy
         for(int i = 0; i < epoch_count; i++){
             //kontroluji, jestli neprisel stop prikaz, pokud jo, zastavuji vypocet
             if(!is_fitting)break;
@@ -308,17 +331,17 @@ void Model::Run(){
 
         Gene_Pool_Party(population);
             //mutace
-
         Mutation(population);
         Checkpoint();
         //spal nejake CPU cykly -> umyslne zpomaleni vypoctu pro test responzivity uart kanalu
-        for(int i = 0; i < 0x88888 * 5;i++)
+        for(int i = 0; i < 0x88888 * 10;i++)
             ;
         }
         //pokud nemam data, neni co vypsat
         //pokud uzivatel zastavil vypocet, taky utec
         if(not_enough_data || !is_fitting)continue;
         //posledni predicted hodnota je odpoved na vstup od uzivatele
+        //Print_Alpha_Predictions();
         float predicted_value = this->alpha->predicted_values[data_pointer - 1];
         ftoa(predicted_value,float_buffer);
         this->bfr->Write_Line(float_buffer);

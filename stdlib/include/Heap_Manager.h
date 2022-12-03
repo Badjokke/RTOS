@@ -8,7 +8,7 @@ private:
     uint32_t remainder = 0;
     //kolik pozaduju po kernelu pameti
     //interni hromadka, kterou alokat ujida, pokud dojde, zavola kernel
-    uint32_t increment_size = 0x21000;
+    uint32_t increment_size = 0x1000;
 public:
     Heap_Manager();
     void Sbrk();

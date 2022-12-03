@@ -1,6 +1,6 @@
 #pragma once
-#include <Heap_Manager.h>
 #include <hal/intdef.h>
+#include <Heap_Manager.h>
 
 inline void* operator new(uint32_t size){
     return h.Alloc(size);

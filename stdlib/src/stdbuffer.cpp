@@ -47,11 +47,10 @@ char* Buffer::Read_Uart_Line(){
         }
     //nic nemam - utec
     if(write_pointer == 0)return nullptr;
-    uint16_t i,j;
+    int i,j;
     bool line_found = false;
-    //TODO optimalizace pres read/write pointery, kontroluji znaky, ktere uz jsou zkontrolovane
     for(i = 0; i < write_pointer; i++){
-        if(out_buffer[i] == '\r'){
+        if(out_buffer[i] == '\r' && i>0){
             line_found = true;
             break;
         }
@@ -66,16 +65,15 @@ char* Buffer::Read_Uart_Line(){
     }
     //asi trochu memory hog
     //mozna nevhodne pro RTOS, protoze nemuze garantovat cas alokace na halde / samotnou alokaci
-    char* bfr = new char[i];
+    char* bfr = new char[20];
     // prekopiruj string a posli ho ven
-    for(j = 0; j < i; j++)
+    for(j = 0; j < i; j++){
         bfr[j] = out_buffer[j];
+    }
     bfr[j] = '\0';
-
     //precetl jsem radek vstupu, "flush" buffer
     write_pointer = 0;
     return bfr;
-
     }
 //pridej @param len byteu do bufferu
 void Buffer::Add_Bytes(uint32_t len){
@@ -95,8 +93,8 @@ char* Buffer::Read_Uart_Line_Blocking(int expected_type){
             int type = get_input_type(line);
             if(type == expected_type)
                 break;
-
-            Write_Line("Neplatny vstup\n");
+            Write_Line("Neplatny vstup. Ocekavam cele cislo.\n");
+            Write_Line(">");
             line = nullptr;
         }
         //nic tam nebylo - spi, dokud neprijde IRQ, v pripade semestralky IRQ chodi pouze z UARTU

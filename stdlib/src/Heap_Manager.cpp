@@ -1,5 +1,6 @@
 #include <Heap_Manager.h>
 
+Heap_Manager h;
 //spravce pameti na halde uzivatelskeho procesu
 //inkrementalni alokace a neumi free
 //aby umel free nejak rozumne, nutne implementovat napriklad seznamem der/procesu nebo buddy systemem
@@ -14,8 +15,11 @@ void Heap_Manager::Sbrk(){
     asm volatile("mov %0, r0" : "=r" (rdnum));
     //pokud je to muj prvni kus haldy, vrat pointer na zacatek haldy
     //dal si tohle ukazovatko spravuje stdlib sam
-    if(mem_address == 0)
+    if(mem_address == 0){
         mem_address = rdnum;
+        remainder = rdnum + increment_size;
+        return;
+    }
     remainder += increment_size;
 }
 //dej mi aktualni adresu, kam chces zapisovat na halde
@@ -26,14 +30,10 @@ uint32_t Heap_Manager::Get_Mem_Address(){
 //alokuj mi na halde velikost @param size
 void* Heap_Manager::Alloc(uint32_t size){
     //uz se mi vic nevejde, musim syscallnout, dokud se vejdu
-    while(size > remainder)
+    while(mem_address + size > remainder)
         Sbrk();
     uint32_t address = mem_address;
     mem_address += size;
-
-    //mam o size pameti mene k dispozici
-    remainder -= size;
-
     return reinterpret_cast<void*>(address);
 }
-Heap_Manager h;
+

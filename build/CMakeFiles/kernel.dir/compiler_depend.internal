@@ -292,6 +292,7 @@ CMakeFiles/kernel.dir/kernel/src/process/process_manager.cpp.obj
  /home/trefil/sem/sources/kernel/include/memory/memmap.h
  /home/trefil/sem/sources/kernel/include/memory/mmu.h
  /home/trefil/sem/sources/kernel/include/memory/pt_alloc.h
+ /home/trefil/sem/sources/stdlib/include/stdstring.h
  /home/trefil/sem/sources/kernel/include/drivers/uart.h
  /home/trefil/sem/sources/kernel/include/drivers/bcm_aux.h
  /home/trefil/sem/sources/kernel/include/drivers/bridges/uart_defs.h

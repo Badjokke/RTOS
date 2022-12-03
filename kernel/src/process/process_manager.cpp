@@ -7,7 +7,7 @@
 #include <memory/mmu.h>
 #include <memory/pt_alloc.h>
 #include <fs/filesystem.h>
-
+#include <stdstring.h>
 #include <drivers/uart.h>
 #include <drivers/timer.h>
 
@@ -86,6 +86,11 @@ bool CProcess_Manager::Notify_Process(TTask_Struct* proc)
 
     return true;
 }
+
+
+
+
+
 //[JT] size - kolik alokuje pameti
 /*
  *  uint32_t logical_break;                     //logicky break procesu - pointer v ramci haldy
@@ -93,6 +98,7 @@ bool CProcess_Manager::Notify_Process(TTask_Struct* proc)
  */
 uint32_t CProcess_Manager::Sbrk(uint32_t size){
     TTask_Struct* task = Get_Current_Process();
+
     //vrat aktualni adresu
     //if(size == 0) return task->logical_break;
     //nemam jeste prirazenou haldu
@@ -106,10 +112,16 @@ uint32_t CProcess_Manager::Sbrk(uint32_t size){
     //mozna nutne obecne posilat i pid procesu, ktery tohle vola
 
     //tady je zacatek volne pameti
+
+
+
     uint32_t address =  task->logical_break;
+
 
     //posun pointer o velikost, kolik je alokovano
     task->logical_break += size;
+
+
 
     //pokud neni misto na halde pro proces, alokuj novou stranku, dokud misto neni
     while(address >= task->physical_break){

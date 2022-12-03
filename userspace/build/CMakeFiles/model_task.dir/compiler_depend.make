@@ -5,8 +5,8 @@ CMakeFiles/model_task.dir/Model/Model.cpp.obj: ../Model/Model.cpp \
   ../Model/Model.h \
   /home/trefil/sem/sources/stdlib/include/Random.h \
   /home/trefil/sem/sources/stdlib/include/memory.h \
-  /home/trefil/sem/sources/stdlib/include/Heap_Manager.h \
   /home/trefil/sem/sources/kernel/include/board/rpi0/hal/intdef.h \
+  /home/trefil/sem/sources/stdlib/include/Heap_Manager.h \
   /home/trefil/sem/sources/stdlib/include/stdbuffer.h \
   /home/trefil/sem/sources/stdlib/include/stdfile.h \
   /home/trefil/sem/sources/kernel/include/process/swi.h \
@@ -22,8 +22,8 @@ CMakeFiles/model_task.dir/Model/Sort.cpp.obj: ../Model/Sort.cpp \
   ../Model/Model.h \
   /home/trefil/sem/sources/stdlib/include/Random.h \
   /home/trefil/sem/sources/stdlib/include/memory.h \
-  /home/trefil/sem/sources/stdlib/include/Heap_Manager.h \
   /home/trefil/sem/sources/kernel/include/board/rpi0/hal/intdef.h \
+  /home/trefil/sem/sources/stdlib/include/Heap_Manager.h \
   /home/trefil/sem/sources/stdlib/include/stdbuffer.h \
   /home/trefil/sem/sources/stdlib/include/stdfile.h \
   /home/trefil/sem/sources/kernel/include/process/swi.h \
@@ -49,7 +49,6 @@ CMakeFiles/model_task.dir/model_task/main.cpp.obj: ../model_task/main.cpp \
   /home/trefil/sem/sources/kernel/include/process/process.h \
   /home/trefil/sem/sources/stdlib/include/memory.h \
   /home/trefil/sem/sources/stdlib/include/Heap_Manager.h \
-  /home/trefil/sem/sources/stdlib/include/stdmutex.h \
   /home/trefil/sem/sources/kernel/include/drivers/bridges/uart_defs.h \
   ../Model/Model.h \
   /home/trefil/sem/sources/stdlib/include/Random.h \
@@ -57,8 +56,6 @@ CMakeFiles/model_task.dir/model_task/main.cpp.obj: ../model_task/main.cpp \
 
 
 /home/trefil/sem/sources/kernel/include/drivers/bridges/uart_defs.h:
-
-/home/trefil/sem/sources/stdlib/include/stdmutex.h:
 
 ../model_task/main.cpp:
 
@@ -82,9 +79,9 @@ CMakeFiles/model_task.dir/model_task/main.cpp.obj: ../model_task/main.cpp \
 
 /home/trefil/sem/sources/kernel/include/fs/filesystem.h:
 
-/home/trefil/sem/sources/stdlib/include/Heap_Manager.h:
-
 /home/trefil/sem/sources/kernel/include/board/rpi0/hal/intdef.h:
+
+/home/trefil/sem/sources/stdlib/include/Heap_Manager.h:
 
 /home/trefil/sem/sources/stdlib/include/stdbuffer.h:
 

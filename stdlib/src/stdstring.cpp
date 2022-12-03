@@ -37,6 +37,8 @@ void itoa(int input, char* output, unsigned int base)
 
 int atoi(const char* input)
 {
+    if(strlen(input) == 1)
+        return *input - '0';
 	int output = 0;
 
 	while (*input != '\0')

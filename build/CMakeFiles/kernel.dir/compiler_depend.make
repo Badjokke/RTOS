@@ -268,6 +268,7 @@ CMakeFiles/kernel.dir/kernel/src/process/process_manager.cpp.obj: ../kernel/src/
   ../kernel/include/memory/memmap.h \
   ../kernel/include/memory/mmu.h \
   ../kernel/include/memory/pt_alloc.h \
+  ../stdlib/include/stdstring.h \
   ../kernel/include/drivers/uart.h \
   ../kernel/include/drivers/bcm_aux.h \
   ../kernel/include/drivers/bridges/uart_defs.h \
